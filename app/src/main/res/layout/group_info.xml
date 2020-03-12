@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/overlay_tutorial_padding"
+        android:layout_weight="0.91">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="盲人點字鍵盤"
+            android:textSize="40dp"
+            android:layout_marginBottom="@dimen/overlay_tutorial_small_margin"
+            android:textAlignment="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="組員："
+            android:textSize="18dp"
+            android:layout_marginTop="@dimen/overlay_tutorial_margin"
+            android:textAlignment="center"
+            android:id="@+id/textView3" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="四資四 103590052 陳巧宜"
+            android:textSize="25dp"
+            android:layout_marginTop="@dimen/overlay_tutorial_margin"
+            android:layout_marginBottom="@dimen/overlay_tutorial_small_margin"
+            android:textAlignment="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="四資四 103590050 徐俊振"
+            android:textSize="25dp"
+            android:layout_marginTop="@dimen/overlay_tutorial_margin"
+            android:layout_marginBottom="@dimen/overlay_tutorial_small_margin"
+            android:textAlignment="center"
+            android:id="@+id/textView4"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="指導教授："
+            android:textSize="18dp"
+            android:layout_marginTop="@dimen/overlay_tutorial_margin"
+            android:textAlignment="center"
+            android:id="@+id/textView2" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="劉建宏 老師"
+            android:textSize="25dp"
+            android:layout_marginTop="@dimen/overlay_tutorial_margin"
+            android:textAlignment="center" />
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="152dp"
+        android:layout_height="wrap_content"
+        android:text="@string/group_info_back_button"
+        android:onClick="onClickBackButton"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/_backbtn" />
+
+</LinearLayout>

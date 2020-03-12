@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.fyp.jammytan.test"
+    android:versionCode="28"
+    android:versionName="0.95.0-beta1">
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="18" />
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="com.fyp.jammytan.test.display.PERMISSION_CONNECT" />
+
+    <!-- Required for overlays. -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <!-- Required for reading/writing custom view labels. -->
+    <uses-permission android:name="com.google.android.marvin.talkback.permission.LABELING" />
+
+    <permission
+        android:name="com.fyp.jammytan.test.display.PERMISSION_CONNECT"
+        android:description="@string/permdesc_displayConnect"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/permlab_displayConnect"
+        android:protectionLevel="signature" />
+
+    <!-- Hardware compatibility. -->
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+
+    <android:uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <android:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/brailleback_setup_title"
+        android:supportsRtl="true">
+        <service
+            android:name=".brailleback.BrailleBackService"
+            android:exported="false"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE"
+            android:settingsActivity=".BrailleBackPreferencesActivity">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/accessibilityservice" />
+        </service>
+        <service
+            android:name=".brailleback.BrailleIME"
+            android:label="@string/braille_ime_name"
+            android:permission="android.permission.BIND_INPUT_METHOD">
+            <intent-filter>
+                <action android:name="android.view.InputMethod" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.view.im"
+                android:resource="@xml/method" />
+        </service>
+        <service
+            android:name=".display.DisplayService"
+            android:exported="false"
+            android:permission="com.fyp.jammytan.test.display.PERMISSION_CONNECT">
+
+            <!-- android:process=":service"> -->
+            <intent-filter>
+                <action android:name="com.fyp.jammytan.test.display.ACTION_DISPLAY_SERVICE" />
+            </intent-filter>
+        </service>
+        <service android:name=".brailleback.SelfBrailleService">
+            <intent-filter>
+                <action android:name="com.fyp.jammytan.test.ACTION_SELF_BRAILLE_SERVICE" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".brailleback.BrailleBackPreferencesActivity"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.accessibilityservice.SERVICE_SETTINGS" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".brailleback.KeyBindingsActivity"
+            android:title="@string/key_bindings_title">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".brailleback.IMESetupWizardActivity"
+            android:excludeFromRecents="true"
+            android:label="@string/ime_setup_wizard_name"
+            android:theme="@android:style/Theme.Holo.Dialog">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".brailleback.OverlayTutorialActivity"
+            android:label="@string/overlay_tutorial_title">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".brailleback.WebViewDialog" />
+        <activity
+            android:name=".brailleback.SearchTutorialActivity"
+            android:title="@string/search_tutorial_title">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".brailleback.GroupInfoActivity"
+            android:label="@string/group_info_title">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
