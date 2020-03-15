@@ -35,6 +35,13 @@ bool BrailleKeyboard::available(char* dots, uint8_t extend){
 		_BTKeyCodes = BTKC_BACKSPACE;
 		return true;
 	}
+	if(extend == BKC_SHIFT){
+		_BTKeyCodes = BTKC_NONE;
+		_BTModifiers = BTKC_MODIFIERS;
+		_isNumber = _isSS4 = _isSS5 = _isSS45 = _isSS46 = _isSS456 = false;
+		_isCapital = 0;
+		return true;
+	}
 	if(!strcmp(dots, BTKC_NONE)){
 		return false;
 	}

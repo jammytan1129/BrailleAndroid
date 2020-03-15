@@ -10,6 +10,10 @@
 #define BKC_RETURN 1
 #define BKC_SPACE 2
 #define BKC_BACKSPACE 3
+#define BKC_SHIFT 4
+
+#define BKC_SPACEBAR "000000"
+#define BKC_NULL "111111"
 
 //Alphabets
 #define BKC_A "100000"
@@ -60,7 +64,7 @@
 #define BKC_SLASH "001100" // / ss: 456
 #define BKC_MINUS "001001" // - ss: 5
 #define BKC_EQUAL "011011" // = ss: 5
-#define BKC_GRAVE "100001" // + ss: 45
+#define BKC_GRAVE "100001" // ` ss: 45
 
 //require modifiers
 #define BKC_QUESTION "011001"  // ? 
