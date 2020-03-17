@@ -52,15 +52,15 @@ void setup()
   pinMode(RETURN, INPUT);
   pinMode(SPACE, INPUT);
   pinMode(BACKSPACE, INPUT);
-   pinMode(SHIFT, INPUT);
-    pinMode(LEFT, INPUT);
-   pinMode(RIGHT, INPUT);
-   pinMode(S0,OUTPUT);
-   pinMode(S1,OUTPUT);
-   pinMode(S2,OUTPUT);
-   pinMode(S3,OUTPUT);
-   pinMode(S4,OUTPUT);
-   pinMode(S5,OUTPUT);
+  pinMode(SHIFT, INPUT);
+  pinMode(LEFT, INPUT);
+  pinMode(RIGHT, INPUT);
+  pinMode(S0,OUTPUT);
+  pinMode(S1,OUTPUT);
+  pinMode(S2,OUTPUT);
+  pinMode(S3,OUTPUT);
+  pinMode(S4,OUTPUT);
+  pinMode(S5,OUTPUT);
 }
 String str;
 String text = " ";
