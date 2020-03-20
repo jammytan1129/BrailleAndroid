@@ -13,17 +13,17 @@
 ## Arduino Keyboard
 - Braille Keyboard的鍵盤所使用的主控板為Arduino Mega2560，搭配1個HC-05藍芽模組，12顆按鈕，6顆電磁閥及3組兩路繼電器所組成。
 - 硬體鍵盤的按鍵功能：
-![](https://i.imgur.com/G0uXM3L.png =300x)
+![](https://i.imgur.com/G0uXM3L.png=300x)
 
 ## Android Accessibility Service
 - 打開行動裝置藍芽及開啟硬體鍵盤，並以藍芽的方式進行連結。
-![](https://i.imgur.com/x9XlPlT.png =200x)
+![](https://i.imgur.com/x9XlPlT.png=200x)
 - 在安裝Braille Android後，可在行動裝置上的Setting->Accessibility中找到Braille Keyboard服務。
-![](https://i.imgur.com/l5DQ4QT.png =200x)
+![](https://i.imgur.com/l5DQ4QT.png=200x)
 -  使用者可以進入Braille Keyboard中的Setting檢查是否有連接上硬體鍵盤。
-![](https://i.imgur.com/b6gBvyG.png =200x)
+![](https://i.imgur.com/b6gBvyG.png=200x)
 - 在使用Braille Keyboard之前，須先打開TalkBack功能，才能夠使用硬體鍵盤中的點字顯示功能。
-![](https://i.imgur.com/cyanb4m.png =200x)
+![](https://i.imgur.com/cyanb4m.png=200x)
 
 ## Braille Input Method
 - 點字輸入是由6點組成:
@@ -32,24 +32,24 @@
     - 左右手尾指的按鍵分別為換行鍵及倒退鍵
     - 左右手拇指的按鍵分別為空白鍵及語言轉換鍵
     - 另外，右下方的兩顆功能為閱讀上一字和下一字的按鍵
-![](https://i.imgur.com/b4xrL7F.png =100x) ![](https://i.imgur.com/W2MSHfH.png =300x)
+![](https://i.imgur.com/b4xrL7F.png=100x) ![](https://i.imgur.com/W2MSHfH.png=300x)
 - 盲文點字的拉丁字母 a – z 是目前最普遍使用到的基礎點字文字，其中的 a – j 與羅馬數字 1 – 0 相同。
 ![](https://i.imgur.com/v7UluWZ.png)
-- 若要輸入數字，則在輸入數字之前先輸入前置符號 ![](https://i.imgur.com/RaJBWGe.png =30x)
+- 若要輸入數字，則在輸入數字之前先輸入前置符號 ![](https://i.imgur.com/RaJBWGe.png=30x)
 ![](https://i.imgur.com/d0MQMBx.png)
 - 字母大小寫
-    - 若只要單一字母大寫，只須在輸入字母之前輸入**一次**前置符號 ![](https://i.imgur.com/v7lR4rw.png =25x)
-    - 若要整個字大寫，則輸入字母前輸入**兩次**前置符號![](https://i.imgur.com/v7lR4rw.png =25x)
+    - 若只要單一字母大寫，只須在輸入字母之前輸入**一次**前置符號 ![](https://i.imgur.com/v7lR4rw.png=25x)
+    - 若要整個字大寫，則輸入字母前輸入**兩次**前置符號![](https://i.imgur.com/v7lR4rw.png=25x)
     - 每當使用者輸入換行鍵，空白鍵及語言轉換鍵，就會取消大寫符號
 - 符號
 
     | 符號 | 點字 | 符號 | 點字 | 符號 | 點字 | 符號 | 點字 |
     | -------- | -------- | -------- | -------- | -------- | -------- | -------- | -------- |
-    | , | ![](https://i.imgur.com/0W3L3M3.png =25x)| = | ![](https://i.imgur.com/9IORLhx.png =45x) | < | ![](https://i.imgur.com/xbAo01s.png =45x) | # | ![](https://i.imgur.com/jBEAahQ.png =45x) |
-    | . |![](https://i.imgur.com/Ls847tJ.png =25x) | \` | ![](https://i.imgur.com/GOuJshy.png =45x) | > | ![](https://i.imgur.com/1vG8ZeI.png =45x) | \| | ![](https://i.imgur.com/fXmVTPj.png =45x) |
-    | ; | ![](https://i.imgur.com/AOOJVqh.png =25x) | ? | ![](https://i.imgur.com/xFnhB1E.png =25x) | ( | ![](https://i.imgur.com/IUjY8T6.png =45x) | ~ | ![](https://i.imgur.com/SR0mzwk.png =45x) |
-    | ' | ![](https://i.imgur.com/XtbuGLm.png =25x) | ! | ![](https://i.imgur.com/4jxT8p8.png =25x) | ) | ![](https://i.imgur.com/lZYvdYw.png =45x) | $ | ![](https://i.imgur.com/9T8DmW9.png =45x) |
-    | \ | ![](https://i.imgur.com/AxJp0vm.png =45x) | : | ![](https://i.imgur.com/XO2CL3s.png =25x) | [ | ![](https://i.imgur.com/4O61Ncq.png =45x) | % | ![](https://i.imgur.com/Xu6R9gu.png =45x) |
-    | / | ![](https://i.imgur.com/qv43PC6.png =45x) | “ | ![](https://i.imgur.com/Z0xdh0O.png =45x) | ] | ![](https://i.imgur.com/y1GH00k.png =45x) | _ | ![](https://i.imgur.com/8IZXO5k.png =45x) |
-    | - | ![](https://i.imgur.com/tWauIJX.png =45x) | ” | ![](https://i.imgur.com/e7WS1Mm.png =45x) | { | ![](https://i.imgur.com/1NmoAV8.png =45x) | + | ![](https://i.imgur.com/9un1XSr.png =45x) |
-    | * | ![](https://i.imgur.com/syTRsVI.png =45x) | @ | ![](https://i.imgur.com/GRMgpbB.png =45x) | } | ![](https://i.imgur.com/wLtJOEy.png =45x) | & | ![](https://i.imgur.com/lSg5SVq.png =45x) |
+    | , | ![](https://i.imgur.com/0W3L3M3.png=25x)| = | ![](https://i.imgur.com/9IORLhx.png=45x) | < | ![](https://i.imgur.com/xbAo01s.png=45x) | # | ![](https://i.imgur.com/jBEAahQ.png=45x) |
+    | . |![](https://i.imgur.com/Ls847tJ.png =25x) | \` | ![](https://i.imgur.com/GOuJshy.png=45x) | > | ![](https://i.imgur.com/1vG8ZeI.png=45x) | \| | ![](https://i.imgur.com/fXmVTPj.png=45x) |
+    | ; | ![](https://i.imgur.com/AOOJVqh.png =25x) | ? | ![](https://i.imgur.com/xFnhB1E.png=25x) | ( | ![](https://i.imgur.com/IUjY8T6.png=45x) | ~ | ![](https://i.imgur.com/SR0mzwk.png=45x) |
+    | ' | ![](https://i.imgur.com/XtbuGLm.png =25x) | ! | ![](https://i.imgur.com/4jxT8p8.png=25x) | ) | ![](https://i.imgur.com/lZYvdYw.png=45x) | $ | ![](https://i.imgur.com/9T8DmW9.png=45x) |
+    | \ | ![](https://i.imgur.com/AxJp0vm.png=45x) | : | ![](https://i.imgur.com/XO2CL3s.png=25x) | [ | ![](https://i.imgur.com/4O61Ncq.png=45x) | % | ![](https://i.imgur.com/Xu6R9gu.png=45x) |
+    | / | ![](https://i.imgur.com/qv43PC6.png=45x) | “ | ![](https://i.imgur.com/Z0xdh0O.png=45x) | ] | ![](https://i.imgur.com/y1GH00k.png=45x) | _ | ![](https://i.imgur.com/8IZXO5k.png=45x) |
+    | - | ![](https://i.imgur.com/tWauIJX.png=45x) | ” | ![](https://i.imgur.com/e7WS1Mm.png=45x) | { | ![](https://i.imgur.com/1NmoAV8.png=45x) | + | ![](https://i.imgur.com/9un1XSr.png=45x) |
+    | * | ![](https://i.imgur.com/syTRsVI.png=45x) | @ | ![](https://i.imgur.com/GRMgpbB.png=45x) | } | ![](https://i.imgur.com/wLtJOEy.png=45x) | & | ![](https://i.imgur.com/lSg5SVq.png=45x) |
